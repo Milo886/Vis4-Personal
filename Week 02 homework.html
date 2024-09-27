@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="Week02homeworkstyle.css">
+
+	<title></title>
+</head>
+<body>
+
+	<!-- div-01 -->
+	<div id="navbarrrrr">
+		<div class="nav-item h1">Milo Number Adder</div>
+	    <div class="nav-item h4">ITEM 1</div>
+	    <div class="nav-item h4">ITEM 2</div>
+	    <div class="nav-item h4">ITEM 3</div>
+	</div>
+
+	<!-- div-02 -->
+	<div id="main-contenttttt">
+
+		<!-- div-02-A -->
+		<div class="sidebar">
+			<h3 class="h3">RESULT</h3>
+			<p id="resultId">0</p>
+			<!-- <button id="changeColorBtn">Clean Content</button> -->
+		</div>
+
+		<!-- div02-B -->
+		 <div class="content">
+            <h3 class="h2">CONTROL CENTER</h3> 
+		 <div id="control-buttons" class="flex-container">
+                <button id="btn1">-2</button>
+                <button id="btn2">-1</button>
+                <button id="btn3">Reset</button>
+                <button id="btn4">+1</button>
+                <button id="btn5">+2</button>
+            </div>
+
+	</div>
+	<script type="text/javascript">
+
+	    var total = 0; // Initialize total to 0
+
+
+
+        // Event listener for Button 1
+        document.getElementById("btn1").addEventListener("click", function() {
+            total = total - 2; // Decrease total by 1
+            document.querySelector("#resultId").innerHTML = total; // Update result
+        });
+
+        // Event listener for Button 2
+        document.getElementById("btn2").addEventListener("click", function() {
+            total = total - 1; // Decrease total by 2
+            document.querySelector("#resultId").innerHTML = total; // Update result
+        });
+
+
+        // Event listener for Button 5
+        document.getElementById("btn3").addEventListener("click", function() {
+            total = 0; // Reset total to 0
+            document.querySelector("#resultId").innerHTML = total; // Update result
+        });
+
+        // Event listener for Button 3
+        document.getElementById("btn4").addEventListener("click", function() {
+            total = total + 1; // Increase total by 1
+            document.querySelector("#resultId").innerHTML = total; // Update result
+        });
+
+        // Event listener for Button 4
+        document.getElementById("btn5").addEventListener("click", function() {
+            total = total + 2; // Increase total by 2
+            document.querySelector("#resultId").innerHTML = total; // Update result
+        });
+		
+	</script>
+</body>
+</html>
