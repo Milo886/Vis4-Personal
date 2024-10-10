@@ -1,0 +1,121 @@
+body, h1, h2, p {
+	margin: 0;
+}
+
+#navbarrrrr {
+	background-color: #FFFFFF;
+	color: #D3D3D3;
+	height: 100px;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+.nav-item {
+    flex: 1; 
+    text-align: center; 
+    color: black;
+
+}
+
+.sidebar{
+    background-color: #D3D3D3;
+    width: 200px;
+    height: 100%;
+}
+
+#resultId {
+    font-size: 18px; 
+    text-align: center;
+}
+
+
+#main-contenttttt{
+    height: calc(100vh - 140px);
+    display: flex;
+}
+
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 10px; /* 按钮之间的间距 */
+    padding: 0 20px; /* 给容器设置左右20px的内边距 */
+}
+
+/* 使所有按钮的宽度一致，包含 Clear History 按钮 */
+.flex-container button {
+    flex: 1; /* 使按钮占据相等的宽度 */
+    padding: 10px 20px;
+    background-color: #999999;
+    color: white;
+    border: none;
+    border-radius: 5px;
+/*    cursor: pointer;*/
+    text-align: center;
+}
+
+/* 悬停时的颜色变化 */
+.flex-container button:hover {
+    background-color: #45a049;
+}
+
+
+/* Clear History & Results Button with Red Background */
+#clearButton {
+    background-color: #FF6347; /* 红色背景 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+ /*   cursor: pointer;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px; /* 上方的间距，确保与上方按钮分开 */*/
+}
+
+/* Hover effect for the Clear History & Results Button */
+#clearButton:hover {
+    background-color: #FF4500; /* 更深的红色，悬停时显示 */
+}
+
+
+.content{
+	flex:1 ;
+	background-color: #E6E6E6;
+/*    padding: 10px 20px;*/
+}
+
+.h1 {
+    font-size: 24px; 
+    font-weight: bold; 
+}
+
+.h2 {
+    font-size: 18px; 
+    margin-left: 20px;
+}
+
+.h3 {
+    font-size: 18px; 
+    text-align: center;
+}
+
+.h4 {
+    font-size: 16px;
+    text-align: center;
+}
+
+#totalMessage {
+    font-size: 16px;
+    text-align: center;
+}
+
+#summary {
+    font-size: 16px;
+    text-align: center;
+}
