@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Sidebar({ total, totalMessage, additionsCount, subtractionsCount, history }) {
+function Sidebar({ total, totalMessage, additionsCount, subtractionsCount, history, removeHistoryItem }) {
 
   return (
     <div className="sidebar">
@@ -13,7 +13,7 @@ function Sidebar({ total, totalMessage, additionsCount, subtractionsCount, histo
       <ul>
         {
         	history.map((entry, index) => (
-	          <li key={index}>{entry}</li>
+	          <li key={index} onClick={() => removeHistoryItem(index)}>{entry}</li>
 	        ))
         }
       </ul>

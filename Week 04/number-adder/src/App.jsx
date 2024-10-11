@@ -27,6 +27,25 @@ function App() {
       }
   };
 
+      // 删除历史记录并更新 Total, additionsCount 和 subtractionsCount
+  const removeHistoryItem = (index) => {
+        const item = history[index];
+        let value = parseInt(item);
+
+        // 根据操作类型更新 total 和操作次数
+        if (item.startsWith('+')) {
+            setTotal(total - value);  // 反向操作
+            setAdditionsCount(additionsCount - 1);
+        } else if (item.startsWith('-')) {
+            setTotal(total + Math.abs(value));  // 反向操作
+            setSubtractionsCount(subtractionsCount - 1);
+        }
+
+        // 移除被点击的历史记录项
+        const updatedHistory = history.filter((_, i) => i !== index);
+        setHistory(updatedHistory);
+    };
+
 
 
   function handleAddOne() {
@@ -79,6 +98,7 @@ function App() {
           totalMessage={totalMessage}
           additionsCount={additionsCount} 
           subtractionsCount={subtractionsCount} 
+          removeHistoryItem={removeHistoryItem}
         />
         <MainContent
           onAddOne={handleAddOne}
